@@ -1,0 +1,177 @@
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: 0.5s;
+}
+
+body {
+  background: #F9FBFF;
+  color: #415167;
+  font-size: 16px;
+  font-family: "Nunito", sans-serif;
+}
+
+.container {
+  width: 1140px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1205px) {
+  .container {
+    width: 100%;
+  }
+}
+
+.header {
+  background: url(../upload/bg-header.jpg) 70% 0 no-repeat;
+  background-size: contain;
+  overflow: hidden;
+  position: relative;
+}
+@media screen and (max-width: 540px) {
+  .header {
+    background-size: cover;
+  }
+}
+
+.header_container {
+  width: 1217px;
+  margin: 0 0 0 183px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 100;
+}
+@media screen and (max-width: 1205px) {
+  .header_container {
+    width: 100%;
+    margin: 0;
+    padding: 0 0 0 40px;
+  }
+}
+
+.header_wrapper {
+  padding-top: 53px;
+}
+@media screen and (max-width: 768px) {
+  .header_wrapper {
+    padding-top: 20px;
+  }
+}
+
+.header_title {
+  display: flex;
+  flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+  font-size: 54px;
+  margin: 407px 0 66px;
+  line-height: 70px;
+}
+@media screen and (max-width: 1025px) {
+  .header_title {
+    margin-top: 200px;
+  }
+}
+@media screen and (max-width: 960px) {
+  .header_title {
+    font-size: 40px;
+    line-height: 50px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header_title {
+    margin-top: 100px;
+    font-size: 35px;
+  }
+}
+@media screen and (max-width: 540px) {
+  .header_title {
+    font-size: 30px;
+    margin-top: 70px;
+  }
+}
+.header_title span {
+  background: #C7A17A;
+  padding: 0 10px;
+  color: #ffffff;
+}
+
+.menu {
+  width: 272px;
+  background: #415167;
+  color: #EDF0F5;
+  display: flex;
+  flex-direction: column;
+  padding: 74px 0 0 55px;
+  overflow-y: scroll;
+}
+@media screen and (max-width: 768px) {
+  .menu {
+    display: none;
+  }
+}
+
+.menu_shop {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: url(../img/ic-shop.png) 0 50% no-repeat;
+  position: relative;
+}
+.menu_shop span {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #C7A17A;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 16px;
+  left: 13px;
+}
+
+.menu_link {
+  margin-top: 30px;
+}
+.menu_link:first-child {
+  font-weight: 700;
+}
+
+.burger_menu span::after, .burger_menu span::before, .burger_menu span {
+  width: 35px;
+  height: 4px;
+  border-radius: 4px;
+  background: #415167;
+  display: inline-block;
+}
+
+.burger_menu {
+  margin: 20px 20px 0 0;
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  right: 5%;
+}
+.burger_menu span::before {
+  content: "";
+  margin-top: 12px;
+}
+.burger_menu span::after {
+  content: "";
+  margin-bottom: 4px;
+}
+@media screen and (max-width: 768px) {
+  .burger_menu {
+    display: inline-block;
+  }
+}
+
+.active {
+  display: flex;
+  position: absolute;
+  transform: translateX(7px);
+}
