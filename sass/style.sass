@@ -19,7 +19,6 @@ body
 .header
   background: url(../upload/bg-header.jpg) 70% 0 no-repeat
   background-size: contain
-  overflow: hidden
   position: relative
   +size-xs
     background-size: cover
@@ -29,10 +28,10 @@ body
   display: flex
   justify-content: space-between
   position: relative
-  z-index: 100
+  padding: 0 0 0 20px
   +size-xl
+    width: 100%
     margin: 0
-    padding: 0 20px
 .header_wrapper
   padding-top: 53px
   +size-s
@@ -65,10 +64,37 @@ body
   color: $light_gray
   display: flex
   flex-direction: column
-  padding: 74px 0 0 55px
+  padding: 74px 0 40px 55px
   overflow-y: scroll
   +size-s
     display: none
+    padding-top: 0
+%close_line
+  width: 50%
+  height: 3px
+  background: $white
+  position: absolute
+  border-radius: 10px
+  top: 12px
+.close
+  width: 30px
+  height: 30px
+  cursor: pointer
+  margin-left: 150px
+  margin-top: 10px
+  position: relative
+  z-index: 1000
+  display: none
+  &::before
+    content: ""
+    @extend %close_line
+    transform: rotate(-38deg)
+  &::after
+    content: ""
+    @extend %close_line
+    transform: rotate(38deg)
+  +size-s
+    display: inline-block
 .menu_shop
   display: inline-block
   width: 30px
@@ -90,6 +116,8 @@ body
   margin-top: 30px
   &:first-child
     font-weight: 700
+  &:hover
+    color: darken($white, 30% )
 %burger_line
   width: 35px
   height: 4px
@@ -114,10 +142,6 @@ body
       margin-bottom: 4px
   +size-s
     display: inline-block
-.active
-  display: flex
-  position: absolute
-  transform: translateX(7px)
 .content_container
   padding: 87px 20px 100px
   +size-s
@@ -218,6 +242,7 @@ body
   +size-s
     display: flex
     flex-direction: column
+    align-items: center
 .choice_wrapper_items_box
   display: flex
   flex-direction: column
@@ -248,7 +273,7 @@ body
   +size-xs
     margin-top: 20px
 .choice_wrapper_items_title
-  font-weight: bold
+  font-weight: 700
   font-size: 24px
   color: $dark
   margin: 12px 0

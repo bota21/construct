@@ -1,10 +1,13 @@
 $(() => {
   $('.burger_menu').on('click', () => {
-    $('.menu').toggleClass('active');
+    $('.menu').show("'slide', {direction: 'right' }, 1000").css({ display: 'flex', 'position': 'absolute', 'top': 0, 'right': 0 });
   });
-  $('.choice_wrapper_wrapper').not(':first').hide();
+  $('.close').on('click', () => {
+    $('.menu').hide('slow');
+  });
+  $('.choice_wrapper_items').not(':first').hide();
   $('.choice_links_link').click(function () {
     $('.choice_links_link').removeClass('tab_active').eq($(this).index()).addClass('tab_active');
-    $('.choice_wrapper_wrapper').hide().eq($(this).index()).fadeIn();
+    $('.choice_wrapper_items').hide().eq($(this).index()).fadeIn();
   }).eq(0).addClass('tab_active')
 });
