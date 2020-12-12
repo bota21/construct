@@ -16,7 +16,6 @@ body
   margin: 0 auto
   +size-xl
     width: 100%
-    padding: 0 20px
 .header
   background: url(../upload/bg-header.jpg) 70% 0 no-repeat
   background-size: contain
@@ -33,6 +32,7 @@ body
   z-index: 100
   +size-xl
     margin: 0
+    padding: 0 20px
 .header_wrapper
   padding-top: 53px
   +size-s
@@ -167,6 +167,8 @@ body
 .choice
   background: linear-gradient(to right, rgba(237,240,245,1) 0%,rgba(237,240,245,1) 80%,rgba(237,240,245,1) 82%,rgba(237,240,245,1) 80%,rgba(249,251,255,1) 80%,rgba(249,251,255,1) 100%)
   padding: 86px 0 125px
+  +size-m
+    padding: 20px 0
 .choice_tab
   display: flex
   flex-direction: row-reverse
@@ -299,3 +301,114 @@ body
   font-weight: 700
   &:hover
     color: darken($accent_hover, 30%)
+.promo
+  padding: 88px 0 128px
+  background: linear-gradient(to right, rgba(249,251,255,1) 0%,rgba(249,251,255,1) 82%,rgba(65,81,103,1) 82%,rgba(65,81,103,1) 100%)
+  +size-m
+    padding: 40px 0
+.promo_title
+  font-weight: 600
+  font-size: 20px
+  line-height: 34px
+  display: flex
+  flex-direction: column
+  align-items: center
+  margin-bottom: 64px
+  span
+    font-family: $mont
+    font-weight: 900
+    font-size: 30px
+  +size-xs
+    margin: 20px
+    font-size: 20px
+    display: -webkit-box
+.promo_wrapper
+  display: flex
+  +size-m
+    flex-wrap: wrap
+.promo_wrapper_item
+  max-width: 360px
+  margin-right: 40px
+  background: $white
+  cursor: pointer
+  &:last-child
+    margin-right: 0
+  &:hover
+    box-shadow: 0 0 20px lighten($dark_gray, 70%)
+  +size-m
+    margin: 20px
+  +size-xs
+    width: 263px
+.promo_wrapper_item_img
+  width: 100%
+  height: 345px
+  +size-m
+    height: 230px
+  +size-xs
+    height: 150px
+.img_first
+  background: darken($light_gray, 1%) url(../img/promo1.png) 50% no-repeat
+  +size-m
+    background-size: 77%
+.img_second
+  background: darken($light_gray, 1%) url(../img/promo2.png) 50% no-repeat
+  +size-m
+    background-size: 77%
+.img_third
+  background: darken($light_gray, 1%) url(../img/promo3.png) 50% no-repeat
+  +size-m
+    background-size: 77%
+.promo_wrapper_item_prices
+  margin: 42px 0 10px 40px
+  display: flex
+.promo_wrapper_item_prices_price
+  font-weight: 600
+  font-size: 20px
+  color: $accent
+  margin-right: 20px
+.promo_wrapper_item_prices_price_line
+  font-style: italic
+  font-weight: 300
+  font-size: 14px
+  line-height: 19px
+  text-decoration-line: line-through
+.promo_wrapper_item_title
+  font-weight: 700
+  font-size: 24px
+  color: $dark
+  margin-left: 40px
+.promo_wrapper_item_text
+  font-weight: 300
+  line-height: 22px
+  color: $dark_gray
+  margin: 10px 40px 32px 40px
+  display: -webkit-box
+  -webkit-line-clamp: 2
+  -webkit-box-orient: vertical
+  overflow: hidden
+  +size-m
+    font-size: 14px
+.promo_wrapper_item_buttons
+  margin: 0 40px 40px
+  display: flex
+  justify-content: space-between
+  align-items: center
+  +size-m
+    font-size: 14px
+.promo_wrapper_item_buttons_button
+  max-width: 134px
+  background: $accent
+  border-radius: 19px
+  padding: 8px 15px
+  &:hover
+    background: darken($accent_hover, 30%)
+.promo_wrapper_item_buttons_link
+  font-weight: 700
+  &:hover
+    color: darken($accent_hover, 30%)
+footer
+  background: $light_gray
+  display: flex
+  justify-content: center
+  padding: 20px 0
+  font-weight: 300
