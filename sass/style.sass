@@ -101,23 +101,24 @@ body
   height: 30px
   background: url(../img/ic-shop.png) 0 50% no-repeat
   position: relative
-  span
-    width: 20px
-    height: 20px
-    border-radius: 50%
-    background: $accent
-    display: flex
-    justify-content: center
-    align-items: center
-    position: absolute
-    bottom: 16px
-    left: 13px
+.menu_shop_number
+  width: 20px
+  height: 20px
+  border-radius: 50%
+  background: $accent
+  display: flex
+  justify-content: center
+  align-items: center
+  position: absolute
+  bottom: 16px
+  left: 13px
 .menu_link
   margin-top: 30px
   &:first-child
     font-weight: 700
   &:hover
     color: darken($white, 30% )
+    text-shadow: 0 0 3px $white
 %burger_line
   width: 35px
   height: 4px
@@ -218,6 +219,8 @@ body
   box-shadow: inset 0 0 9px lighten($dark_gray, 70%)
   +size-m
     flex-direction: row
+    justify-content: center
+    width: 100%
 .choice_links_link
   cursor: pointer
   font-family: $mont
