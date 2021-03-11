@@ -673,7 +673,7 @@ body {
 
 @media screen and (max-width: 540px) {
   .promo {
-    background: #415167;
+    background: #f9fbff;
     padding: 10px 0;
   }
 }
@@ -723,7 +723,6 @@ body {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    color: #fff;
     text-align: center;
   }
 }
